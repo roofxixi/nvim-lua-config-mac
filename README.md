@@ -2,6 +2,12 @@
 
 基于[cosmos-nvim](https://github.com/yetone/cosmos-nvim)配置的自己的neovim配置
 
+安装步骤
+
+1. git clone https://github.com/WanderHuang/nvim-lua-config-mac.git ~/.config/nvim
+2. vim +checkhealth
+3. in vim: :PackerInstall
+
 <p align="center">A must-have configuration for Spacemacs users after defecting to Vim</p>
 
 If you want the power of **VSCode**, the interactivity of **Spacemacs**, and the text-objects of **Vim**, I highly recommend you try this configuration.
