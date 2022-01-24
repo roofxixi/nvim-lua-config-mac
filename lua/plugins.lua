@@ -129,6 +129,14 @@ return require('packer').startup(function(use)
     -- rust 配置
     use {'nvim-telescope/telescope-ui-select.nvim' }
     use 'simrat39/rust-tools.nvim'
+    use {
+        'saecki/crates.nvim',
+        tag = 'v0.1.0',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    }
     -- debug相关的
     -- use 'nvim-lua/plenary.nvim'
     use 'mfussenegger/nvim-dap'
