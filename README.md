@@ -4,9 +4,9 @@
 
 安装步骤
 
-1. git clone https://github.com/WanderHuang/nvim-lua-config-mac.git ~/.config/nvim
-2. vim +checkhealth
-3. in vim: :PackerInstall
+1. `git clone https://github.com/WanderHuang/nvim-lua-config-mac.git ~/.config/nvim`
+2. `vim +checkhealth`
+3. in vim: `:PackerInstall`
 
 <p align="center">A must-have configuration for Spacemacs users after defecting to Vim</p>
 
