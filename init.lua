@@ -11,6 +11,9 @@ require('mappings') -- 键位映射关系
 -- rust配置
 require('rust-tools').setup({})
 
+-- 颜色配置
+require'colorizer'.setup()
+
 -- 主题
 vim.cmd [[
   colorscheme gruvbox
