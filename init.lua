@@ -16,6 +16,8 @@ vim.cmd [[
   colorscheme gruvbox
   set background=dark
 ]]
+
+-- 设置全局的option值
 vim.api.nvim_set_option('tabpagemax', 8)
 
 -- 键位映射

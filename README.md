@@ -1,6 +1,6 @@
 <h1 align="center">🪐 My Neovim Configuration 🚀</h1>
 
-基于[cosmos-nvim](https://github.com/yetone/cosmos-nvim)配置的自己的neovim配置
+基于[cosmos-nvim](https://github.com/yetone/cosmos-nvim)配置的自己的neovim配置，带一些简单的注释
 
 安装步骤
 
