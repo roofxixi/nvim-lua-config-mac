@@ -23,11 +23,11 @@ g.user_emmet_install_global = 0
 -- g.copilot_assume_mapped = true
 
 -- netrw
-g.netrw_banner = 1
-g.netrw_winsize = '80%'
-g.netrw_browse_split = 4
-g.netrw_altv = 1
-g.netrw_liststyle = 3
+-- g.netrw_banner = 1
+-- g.netrw_winsize = '80%'
+-- g.netrw_browse_split = 4
+-- g.netrw_altv = 1
+-- g.netrw_liststyle = 3
 
 opt.complete = ''
 opt.background = 'dark'

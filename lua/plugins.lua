@@ -150,6 +150,15 @@ return require('packer').startup(function(use)
 
     use 'RRethy/vim-illuminate' -- 单词高亮
     use 'norcalli/nvim-colorizer.lua' -- 颜色
+
+    -- 文件树
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+          'kyazdani42/nvim-web-devicons', -- optional, for file icon
+        },
+        config = function() require'nvim-tree'.setup {} end
+    }
     if packer_bootstrap then
       require('packer').sync()
     end

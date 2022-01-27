@@ -8,12 +8,6 @@ require('mappings') -- 键位映射关系
 -- 自定义字段
 -- %%%%%%%%%%%%%%%%%
 
--- rust配置
-require('rust-tools').setup({})
-
--- 颜色配置
-require'colorizer'.setup()
-
 -- 主题
 vim.cmd [[
   colorscheme gruvbox
@@ -21,7 +15,7 @@ vim.cmd [[
 ]]
 
 -- 设置全局的option值
-vim.api.nvim_set_option('tabpagemax', 8)
+-- vim.api.nvim_set_option('tabpagemax', 8)
 
 -- 键位映射
 vim.cmd [[
