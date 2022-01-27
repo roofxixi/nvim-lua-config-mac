@@ -665,9 +665,10 @@ utils.safe_require('nvim-tree', function(tree)
         number = false,
         relativenumber = false,
         signcolumn = "yes",
-        mappints = {
+        mappings = {
           list = {
-            { key = "s",  cb = tree_bind_callback('vsplit')}
+            { key = "s",  cb = tree_bind_callback('vsplit')},
+            { key = "v",  cb = tree_bind_callback('vsplit')}
           }
         }
       },
