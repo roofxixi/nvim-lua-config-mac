@@ -112,7 +112,8 @@ utils.safe_require('which-key', function(wk)
     },
     g = {
       name = '+Git',
-      s = { ':Magit<CR>', 'Magit status' }, -- git状态显示
+      s = { ':Magit<CR>', 'Magit status, see: vimagit' }, -- git状态显示
+      g = { ':Flog<CR>', 'Show git commit graph' }, -- git图像显示
     },
     e = {
       name = '+Errors',
