@@ -1,4 +1,6 @@
-<h1 align="center">🪐 My Neovim Configuration 🚀</h1>
+# 🪐 好用的`neovim(0.6+)`配置！ 🚀
+
+## 我的`README`
 
 基于[cosmos-nvim](https://github.com/yetone/cosmos-nvim)配置的自己的neovim配置，带一些简单的注释
 
@@ -7,6 +9,10 @@
 1. `git clone https://github.com/WanderHuang/nvim-lua-config-mac.git ~/.config/nvim`
 2. `vim +checkhealth`
 3. in vim: `:PackerInstall`
+
+## 原始的`README`
+
+> [原仓库](https://github.com/yetone/cosmos-nvim)建议学一下，用了这套配置后，感觉`vim`曲线降低了
 
 <p align="center">A must-have configuration for Spacemacs users after defecting to Vim</p>
 
