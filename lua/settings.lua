@@ -76,6 +76,9 @@ opt.backspace = 'indent,eol,start'
 opt.clipboard = 'unnamed'
 opt.shell = 'zsh'
 
+-- 高亮配置
+g.Illuminate_delay = 300
+g.Illuminate_ftblacklist = {'nerdtree', 'netrw'}
 vim.cmd [[
 hi Pmenu ctermfg=white ctermbg=238
 ]]

@@ -148,7 +148,7 @@ return require('packer').startup(function(use)
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
 
-    use 'yamatsum/nvim-cursorline' -- 单词高亮
+    use 'RRethy/vim-illuminate' -- 单词高亮
     use 'norcalli/nvim-colorizer.lua' -- 颜色
     if packer_bootstrap then
       require('packer').sync()
