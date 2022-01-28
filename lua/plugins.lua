@@ -80,7 +80,7 @@ return require('packer').startup(function(use)
 
     use 'neovim/nvim-lspconfig'
     use 'ojroques/nvim-lspfuzzy'
-    use 'nvim-lualine/lualine.nvim'
+    use 'nvim-lualine/lualine.nvim' -- 底部状态栏
     use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- 顶栏显示buffer状态 类似vscode的标签
 
     use 'tami5/lspsaga.nvim'

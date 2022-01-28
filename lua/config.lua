@@ -29,19 +29,19 @@ utils.safe_require('lualine', function(lualine)
       },
       lualine_b = {'branch', 'diff', 'diagnostics', 'filename'},
       lualine_c = {},
-      lualine_x = {},
-      lualine_y = {'encoding', 'fileformat', 'filetype', 'progress'},
+      lualine_x = {'encoding', 'fileformat', 'filetype'},
+      lualine_y = {'progress'},
       lualine_z = {
         { 'location', separator = { right = '' }, left_padding = 2 },
       },
     },
     inactive_sections = {
-      lualine_a = { 'filename' },
+      lualine_a = {},
       lualine_b = {},
-      lualine_c = {},
-      lualine_x = {},
+      lualine_c = {'filename'},
+      lualine_x = {'location'},
       lualine_y = {},
-      lualine_z = { 'location' },
+      lualine_z = {},
     },
     tabline = {},
     extensions = {}
@@ -49,8 +49,8 @@ utils.safe_require('lualine', function(lualine)
 
   -- Inserts a component in lualine_b at left section
   local function ins_config_left(component)
-    if utils.index_of(config.sections.lualine_b, component) < 0 then
-      table.insert(config.sections.lualine_b, component)
+    if utils.index_of(config.sections.lualine_c, component) < 0 then
+      table.insert(config.sections.lualine_c, component)
     end
   end
 
