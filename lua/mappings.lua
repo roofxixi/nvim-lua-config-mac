@@ -75,9 +75,15 @@ utils.safe_require('which-key', function(wk)
     },
     b = {
       name = '+Buffers',
-      b = { "<cmd>lua require('telescope.builtin').buffers { sort_mru = true }<cr>", 'List buffers' },
+      b = { "<cmd>lua require('telescope.builtin').buffers { sort_mru = true }<CR>", 'List buffers' },
       n = { ':BufferLineCycleNext<CR>', 'Next buffer' },
       p = { ':BufferLineCyclePrev<CR>', 'Previous buffer' },
+      S = {
+        name = 'Sort BufferLines',
+        e = { ':BufferLineSortByExtension<CR>', 'By Extensions'},
+        d = { ':BufferLineSortByDirectory<CR>', 'By Directory' },
+        i = { "<cmd>lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>", 'By id' }
+      },
       d = { ':bw<CR>', 'Delete buffer' },
       f = { "<cmd>lua vim.lsp.buf.formatting_sync(nil, 500)<CR>", 'Format current buffer'},
     },
