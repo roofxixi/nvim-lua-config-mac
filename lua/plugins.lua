@@ -151,7 +151,7 @@ return require('packer').startup(function(use)
     use 'RRethy/vim-illuminate' -- 单词高亮
     use 'norcalli/nvim-colorizer.lua' -- 颜色
 
-    -- 文件树
+    -- 文件树 <C-]>进入cursor目录 H 切换.文件隐藏
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
