@@ -95,18 +95,20 @@ utils.safe_require('which-key', function(wk)
         name = 'Config files',
         d = { "<cmd>lua require'functions'.edit_neovim()<CR>", 'Open dotfiles' },
         R = { "<cmd>lua require'functions'.reload_configuration()<CR>", 'Reload configuration' },
-      }
+      },
+      w = {'<cmd>Telescope grep_string theme=ivy<CR>', 'Find cursor word'},
+      t = { "<cmd> lua require('telescope.builtin').treesitter()<CR>", 'trees of functions/variables' },
     },
     p = {
       name = '+Projects',
-      p = { '<cmd>Telescope projects theme=ivy<cr>', 'List projects' },
-      f = { '<cmd>Telescope find_files<CR>', 'Find project files' },
+      p = { '<cmd>Telescope projects theme=ivy<CR>', 'List projects' },
+      f = { '<cmd>Telescope find_files<CR>', 'Find project files' }
     },
     j = {
       name = '+Jump',
       j = { '<Plug>(easymotion-s)', 'Jump to char' },
       l = { '<Plug>(easymotion-bd-jk)', 'Jump to line' },
-      i = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>", 'Jump to symbol' },
+      i = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", 'Jump to symbol' },
     },
     s = {
       name = '+Search/Symbols',
@@ -120,10 +122,12 @@ utils.safe_require('which-key', function(wk)
       name = '+Git',
       s = { ':Magit<CR>', 'Magit status, see: vimagit' }, -- git状态显示
       g = { ':Flog<CR>', 'Show git commit graph' }, -- git图像显示
+      c = { "<cmd> lua require('telescope.builtin').git_commits()<CR>", 'Show commits(grep)' }, -- git commits 可过滤
+      b = { "<cmd> lua require('telescope.builtin').git_branches()<CR>", 'Show branches(grep)' }, -- git branchs 可过滤
     },
     e = {
       name = '+Errors',
-      a = { "<cmd>lua require('telescope.builtin').diagnostics{ bufnr=0 }<cr>", 'List all errors' },
+      a = { "<cmd>lua require('telescope.builtin').diagnostics{ bufnr=0 }<CR>", 'List all errors' },
       k = {"<cmd>lua vim.diagnostic.goto_prev()<CR>", "lspsaga.diagnostic PREV"},
       j = {"<cmd>lua vim.diagnostic.goto_next()<CR>", "lspsaga.diagnostic NEXT"},
       f = { ':Lspsaga code_action<CR>', 'Fix error' },
@@ -134,10 +138,12 @@ utils.safe_require('which-key', function(wk)
         'gcc<Esc>', 'Comment line', noremap = false, mode = 'v',
       },
     },
-    ["t"] = { ':Lspsaga open_floaterm<CR>', 'Open Terminal' }, -- 打开终端
+    ["T"] = { ':Lspsaga open_floaterm<CR>', 'Open Terminal' }, -- 打开终端
     ['*'] = { "<cmd>lua require('telescope.builtin').lsp_references()<cr>", 'Search reference in current project' }, -- lsp 查找引用
-    ['/'] = { ':Telescope live_grep<CR>', 'Search project' }, -- 项目内查找
+    ['/'] = { ':Telescope live_grep<CR>', 'Fuzzy search in project' }, -- 项目内查找
+    ['!'] = { ':Telescope help_tags theme=ivy<CR>', 'Help commands by fuzzy search' }, -- vim帮助查找
     ['<Tab>'] = { ':b#<CR>', 'Last buffer' },
+    ['t'] = { "<cmd> lua require('telescope.builtin').builtin()<CR>", 'Telescope current project' },
     ['<Space>'] = { "<cmd>lua require('functions').commands(require('telescope.themes').get_ivy({}))<CR>", 'Commands' }, -- 查找命令
   }, { prefix = '<leader>' })
 end)
@@ -155,8 +161,7 @@ nmap('gr', "<cmd>lua require('lspsaga.rename').rename()<CR>") -- 重命名
 nmap('ca', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>") -- 代码操作
 vmap('ca', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>") -- 选中的代码操作
 nmap('gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>") -- 异步查找单词定义、引用
--- tmap('<C-[>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
--- tmap('<C-]>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
+tmap('<ESC>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
 set_keymap('n', 's', '<Plug>(easymotion-overwin-f)', {})
 set_keymap('n', '<leader>;;', 'gcc', {})
 set_keymap('v', '<leader>;', 'gcc<esc>', {})

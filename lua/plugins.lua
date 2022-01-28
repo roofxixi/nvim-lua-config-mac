@@ -88,7 +88,7 @@ return require('packer').startup(function(use)
     use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
-    } -- 搜索
+    } -- 搜索 需要搭配ripgrep(live_grep grep_string功能)
     use 'nvim-telescope/telescope-file-browser.nvim'
 
     use 'hrsh7th/cmp-nvim-lsp'

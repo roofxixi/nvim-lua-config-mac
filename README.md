@@ -10,6 +10,16 @@
 2. `vim +checkhealth`
 3. in vim: `:PackerInstall`
 
+## 特殊技能
+
+### 全局查找替换
+
+1. `<space>/`查找项目对应的字符串
+2. `<C-q>`把`telescope`查出来的数据导入`quickfix list`
+3. `[option]`过滤自己需要修改的数据要使用`cfilter`，加载`:packadd Cfilter`
+4. `:Cfilter YOUR_STRING`
+5. `:cdo s/ORIGIN/REPLACEMENT/gc`
+
 ## 原始的`README`
 
 > [原仓库](https://github.com/yetone/cosmos-nvim)建议学一下，用了这套配置后，感觉`vim`曲线降低了
