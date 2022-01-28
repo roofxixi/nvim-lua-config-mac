@@ -149,8 +149,8 @@ nmap('gr', "<cmd>lua require('lspsaga.rename').rename()<CR>") -- 重命名
 nmap('ca', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>") -- 代码操作
 vmap('ca', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>") -- 选中的代码操作
 nmap('gh', "<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>") -- 异步查找单词定义、引用
-tmap('<C-[>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
-tmap('<C-]>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
+-- tmap('<C-[>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
+-- tmap('<C-]>', '<C-\\><C-n>:Lspsaga close_floaterm<CR>') -- 关闭终端
 set_keymap('n', 's', '<Plug>(easymotion-overwin-f)', {})
 set_keymap('n', '<leader>;;', 'gcc', {})
 set_keymap('v', '<leader>;', 'gcc<esc>', {})
