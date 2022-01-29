@@ -104,24 +104,24 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-autopairs'
 
-    use 'tamago324/nlsp-settings.nvim'
+    use 'tamago324/nlsp-settings.nvim' -- 用json配置LSP，像coc.nvim一样
     use 'williamboman/nvim-lsp-installer'
 
     -- use 'arkav/lualine-lsp-progress' -- lsp 进度渲染
-    use 'j-hui/fidget.nvim'
+    use 'j-hui/fidget.nvim' -- 右下角进度渲染
 
-    use 'dstein64/vim-startuptime'
+    use 'dstein64/vim-startuptime' -- 计算启动时间 :StartupTime
 
-    use 'folke/lua-dev.nvim'
+    use 'folke/lua-dev.nvim' -- lua语法提示
 
-    use {
-      'pwntester/octo.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope.nvim',
-        'kyazdani42/nvim-web-devicons',
-      },
-    }
+    -- use {
+    --   'pwntester/octo.nvim', -- github issue和pr管理 需要github cli
+    --   requires = {
+    --     'nvim-lua/plenary.nvim',
+    --     'nvim-telescope/telescope.nvim',
+    --     'kyazdani42/nvim-web-devicons',
+    --   },
+    -- }
 
     -- git graph
     use 'tpope/vim-fugitive'
