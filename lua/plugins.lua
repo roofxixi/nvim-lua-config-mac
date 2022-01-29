@@ -107,7 +107,8 @@ return require('packer').startup(function(use)
     use 'tamago324/nlsp-settings.nvim'
     use 'williamboman/nvim-lsp-installer'
 
-    use 'arkav/lualine-lsp-progress'
+    -- use 'arkav/lualine-lsp-progress' -- lsp 进度渲染
+    use 'j-hui/fidget.nvim'
 
     use 'dstein64/vim-startuptime'
 

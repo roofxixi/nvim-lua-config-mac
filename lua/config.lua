@@ -54,31 +54,31 @@ utils.safe_require('lualine', function(lualine)
     end
   end
 
-  local lsp_progress = require('lualine.components.lsp_progress')
+  -- local lsp_progress = require('lualine.components.lsp_progress')
 
-  ins_config_left {
-    'lsp_progress',
-    display_components = { 'lsp_client_name', 'spinner', { 'title', 'percentage', 'message' }},
-    colors = {
-      percentage  = colors.cyan,
-      title  = colors.cyan,
-      message  = colors.cyan,
-      spinner = colors.cyan,
-      lsp_client_name = colors.magenta,
-      use = true,
-    },
-    separators = {
-      component = ' ',
-      progress = ' | ',
-      percentage = { pre = '', post = '%% ' },
-      title = { pre = '', post = ': ' },
-      lsp_client_name = { pre = '[', post = ']' },
-      spinner = { pre = '', post = '' },
-      message = { commenced = 'In Progress', completed = 'Completed' },
-    },
-    timer = { progress_enddelay = 500, spinner = 500, lsp_client_name_enddelay = 1000 },
-    spinner_symbols = lsp_progress.default.spinner_symbols_moon,
-  }
+  -- ins_config_left {
+  --   'lsp_progress',
+  --   display_components = { 'lsp_client_name', 'spinner', { 'title', 'percentage', 'message' }},
+  --   colors = {
+  --     percentage  = colors.cyan,
+  --     title  = colors.cyan,
+  --     message  = colors.cyan,
+  --     spinner = colors.cyan,
+  --     lsp_client_name = colors.magenta,
+  --     use = true,
+  --   },
+  --   separators = {
+  --     component = ' ',
+  --     progress = ' | ',
+  --     percentage = { pre = '', post = '%% ' },
+  --     title = { pre = '', post = ': ' },
+  --     lsp_client_name = { pre = '[', post = ']' },
+  --     spinner = { pre = '', post = '' },
+  --     message = { commenced = 'In Progress', completed = 'Completed' },
+  --   },
+  --   timer = { progress_enddelay = 500, spinner = 500, lsp_client_name_enddelay = 1000 },
+  --   spinner_symbols = lsp_progress.default.spinner_symbols_moon,
+  -- }
 
   lualine.setup(config)
 end)
@@ -709,6 +709,10 @@ utils.safe_require('nvim-tree', function(tree)
         require_confirm = true
       }
     })
+end)
+
+utils.safe_require('fidget', function(fid) 
+  fid.setup({})
 end)
 
 
