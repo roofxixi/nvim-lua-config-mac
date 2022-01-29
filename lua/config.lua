@@ -584,13 +584,13 @@ utils.safe_require('alpha', function(alpha)
 end)
 -- End of setup for alpha
 
--- Setup for octo
-utils.safe_require('octo', function(octo)
-  octo.setup({
-    default_remote = { "upsteam", "origin", "main" },
-  })
-end)
--- End of setup for octo
+-- -- Setup for octo 远程管理github issue和pr，暂时用不到
+-- utils.safe_require('octo', function(octo)
+--   octo.setup({
+--     default_remote = { "upsteam", "origin", "main" },
+--   })
+-- end)
+-- -- End of setup for octo
 
 -- [start] 颜色配置
 utils.safe_require('colorizer', function(color)
